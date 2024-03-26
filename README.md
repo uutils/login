@@ -17,3 +17,8 @@ Reimplement this command in Rust:
 
 Upstream:
 https://github.com/shadow-maint/shadow
+
+
+## License
+
+login is licensed under the MIT License - see the `LICENSE` file for details
