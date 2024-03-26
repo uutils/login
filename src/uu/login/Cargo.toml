@@ -1,0 +1,23 @@
+[package]
+name = "uu_login"
+version = "0.0.1"
+edition = "2021"
+authors = ["uutils developers"]
+license = "MIT"
+description = "login ~ (uutils) Execute a program periodically, showing output fullscreen"
+
+homepage = "https://github.com/uutils/login"
+repository = "https://github.com/uutils/login/tree/main/src/uu/login"
+keywords = ["acl", "uutils", "cross-platform", "cli", "utility"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+uucore = { workspace = true }
+clap = { workspace = true }
+
+[lib]
+path = "src/login.rs"
+
+[[bin]]
+name = "login"
+path = "src/main.rs"
