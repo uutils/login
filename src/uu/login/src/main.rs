@@ -1,1 +1,1 @@
-uucore::bin!(uu_watch);
+uucore::bin!(uu_login);
