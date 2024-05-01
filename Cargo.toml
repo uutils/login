@@ -57,7 +57,7 @@ textwrap = { workspace = true }
 login = { optional = true, version = "0.0.1", package = "uu_login", path = "src/uu/login" }
 
 [dev-dependencies]
-pretty_assertions = "1"
+pretty_assertions = "1.4.0"
 regex = { workspace = true }
 tempfile = { workspace = true }
 libc = { workspace = true }
