@@ -1,0 +1,24 @@
+[package]
+name = "uu_nologin"
+version = "0.0.1"
+edition = "2021"
+authors = ["uutils developers"]
+license = "MIT"
+description = "nologin ~ (uutils) Politely refuse a login"
+
+homepage = "https://github.com/uutils/login"
+repository = "https://github.com/uutils/login/tree/main/src/uu/nologin"
+keywords = ["acl", "uutils", "cross-platform", "cli", "utility"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+uucore = { workspace = true }
+clap = { workspace = true }
+
+[lib]
+path = "src/nologin.rs"
+
+[[bin]]
+name = "nologin"
+path = "src/main.rs"
+
