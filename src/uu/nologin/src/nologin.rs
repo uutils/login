@@ -5,7 +5,10 @@
 
 use clap::{crate_version, Arg, Command};
 use std::{ffi::OsString, io::Write};
-use uucore::{error::{set_exit_code, UResult}, format_usage, help_about, help_usage};
+use uucore::{
+    error::{set_exit_code, UResult},
+    format_usage, help_about, help_usage,
+};
 
 const ABOUT: &str = help_about!("nologin.md");
 const USAGE: &str = help_usage!("nologin.md");
@@ -37,7 +40,10 @@ pub fn uumain(args: impl uucore::Args) -> UResult<()> {
                 } else {
                     writeln!(std::io::stdout(), "nologin: unrecognized option")?;
                 }
-                writeln!(std::io::stdout(), "Try 'nologin --help' for more information.")
+                writeln!(
+                    std::io::stdout(),
+                    "Try 'nologin --help' for more information."
+                )
             }
             _ => Ok(()),
         };
@@ -48,7 +54,10 @@ pub fn uumain(args: impl uucore::Args) -> UResult<()> {
             let _ = writeln!(std::io::stderr(), "{}: {}", uucore::util_name(), print_fail);
         }
     } else {
-        let _ = writeln!(std::io::stdout(), "This account is currently not available.");
+        let _ = writeln!(
+            std::io::stdout(),
+            "This account is currently not available."
+        );
     }
 
     Ok(())
@@ -66,7 +75,6 @@ pub fn uu_app() -> Command {
                 .short('c')
                 .long("command")
                 .value_name("command")
-                .help("does nothing (for compatibility with su -c)")
+                .help("does nothing (for compatibility with su -c)"),
         )
 }
-
