@@ -9,7 +9,7 @@ version = "0.0.1"
 authors = ["uutils developers"]
 license = "MIT"
 description = "login ~ implemented as universal (cross-platform) utils, written in Rust"
-default-run = "login"
+default-run = "shadow"
 
 homepage = "https://github.com/uutils/login"
 repository = "https://github.com/uutils/login"
@@ -77,8 +77,8 @@ phf_codegen = { workspace = true }
 
 
 [[bin]]
-name = "login"
-path = "src/bin/login.rs"
+name = "shadow"
+path = "src/bin/shadow.rs"
 
 [[bin]]
 name = "uudoc"
