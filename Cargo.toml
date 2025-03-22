@@ -27,6 +27,7 @@ uudoc = []
 
 feat_common_core = [
   "login",
+  "nologin",
 ]
 
 [workspace.dependencies]
@@ -56,6 +57,7 @@ textwrap = { workspace = true }
 
 #
 login = { optional = true, version = "0.0.1", package = "uu_login", path = "src/uu/login" }
+nologin = { optional = true, version = "0.0.1", package = "uu_nologin", path = "src/uu/nologin" }
 
 [dev-dependencies]
 pretty_assertions = "1.4.0"
