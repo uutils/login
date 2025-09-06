@@ -66,6 +66,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cf4b9d6a944f767f8e5e0db018570623c85f3d925ac718db4e06d0187adb21c1"
 
 [[package]]
+name = "bstr"
+version = "1.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "234113d19d0d7d613b40e86fb654acf958910802bcceab913a4f9e7cda03b1a4"
+dependencies = [
+ "memchr",
+ "regex-automata",
+ "serde",
+]
+
+[[package]]
 name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -747,13 +758,15 @@ dependencies = [
 
 [[package]]
 name = "uucore"
-version = "0.1.0"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9032bf981784f22fcc5ddc7e74b7cf3bae3d5f44a48d2054138ed38068b9f4e0"
+checksum = "d52e9182faf0952030e96fdfa76e733ef10981cad31a89bc790d3410f85b7f0c"
 dependencies = [
+ "bstr",
  "clap",
  "fluent",
  "fluent-bundle",
+ "fluent-syntax",
  "libc",
  "nix",
  "number_prefix",
@@ -766,9 +779,9 @@ dependencies = [
 
 [[package]]
 name = "uucore_procs"
-version = "0.1.0"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c933945fdac5b7779eae1fc746146e61f5b0298deb6ede002ce0b6e93e1b3bfc"
+checksum = "8624767e57fc437268b166c09c8f6d1461bf7dc8ffe86b4f0bd3b36aca1253bc"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -777,9 +790,9 @@ dependencies = [
 
 [[package]]
 name = "uuhelp_parser"
-version = "0.1.0"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "beda381dd5c7927f8682f50b055b0903bb694ba5a4b27fad1b4934bc4fbf7b8d"
+checksum = "e54f43a40bcb9c63b41f48698c03ae07604358e707cca7372f1ffa21a0b76a81"
 
 [[package]]
 name = "wasi"
