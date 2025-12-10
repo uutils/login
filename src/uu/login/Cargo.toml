@@ -1,19 +1,21 @@
 [package]
 name = "uu_login"
-version = "0.0.1"
-edition = "2021"
-authors = ["uutils developers"]
-license = "MIT"
 description = "login ~ (uutils) Execute a program periodically, showing output fullscreen"
-
-homepage = "https://github.com/uutils/login"
 repository = "https://github.com/uutils/login/tree/main/src/uu/login"
-keywords = ["acl", "uutils", "cross-platform", "cli", "utility"]
-categories = ["command-line-utilities"]
+version.workspace = true
+authors.workspace = true
+license.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+edition.workspace = true
+readme.workspace = true
 
 [dependencies]
-uucore = { workspace = true }
+uucore = { workspace = true, features = ["process"] }
 clap = { workspace = true }
+tempfile = { workspace = true }
+thiserror = { workspace = true }
 
 [lib]
 path = "src/login.rs"
