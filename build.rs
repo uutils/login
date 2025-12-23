@@ -51,9 +51,12 @@ pub fn main() {
     .unwrap();
 
     let mut phf_map = phf_codegen::OrderedMap::<&str>::new();
-    for krate in &crates {
-        let map_value = format!("({krate}::uumain, {krate}::uu_app)");
-        phf_map.entry(krate, &map_value);
+    let map_values: Vec<_> = crates
+        .iter()
+        .map(|krate| format!("({krate}::uumain, {krate}::uu_app)"))
+        .collect();
+    for (krate, map_value) in crates.iter().zip(&map_values) {
+        phf_map.entry(krate, map_value);
     }
     write!(mf, "{}", phf_map.build()).unwrap();
     mf.write_all(b"\n}\n").unwrap();
