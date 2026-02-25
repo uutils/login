@@ -36,7 +36,7 @@ clap_mangen = "0.2.20"
 libc = "0.2.154"
 phf = "0.13.0"
 phf_codegen = "0.13.1"
-rand = { version = "0.9.0", features = ["small_rng"] }
+rand = { version = "0.10.0", features = ["small_rng"] }
 regex = "1.10.4"
 tempfile = "3.10.1"
 textwrap = { version = "0.16.1", features = ["terminal_size"] }
