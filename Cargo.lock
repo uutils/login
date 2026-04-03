@@ -386,6 +386,7 @@ dependencies = [
  "tempfile",
  "textwrap",
  "uu_login",
+ "uu_nologin",
  "uucore",
  "xattr",
 ]
@@ -832,6 +833,14 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 
 [[package]]
 name = "uu_login"
+version = "0.0.1"
+dependencies = [
+ "clap",
+ "uucore",
+]
+
+[[package]]
+name = "uu_nologin"
 version = "0.0.1"
 dependencies = [
  "clap",
